@@ -14,27 +14,45 @@
     <nav id="navbar">
         <div class="logo">SIRA</div>
         <div class="nav-links">
+            <a href="#overview">Overview</a>
             <a href="#problem">The Problem</a>
-            <a href="#business">Business & Scope</a>
-            <a href="#roadmap">Architecture & Gameplan</a>
-            <a href="#contact">Contact Us</a>
+            <a href="#architecture">Architecture</a>
+            <a href="#business">Business Case</a>
+            <a href="#roadmap">Gameplan</a>
+            <a href="#contact">Contact</a>
         </div>
     </nav>
 
     <header class="hero">
         <div class="hero-content fade-in">
-            <h1>Smart Comfort. <br><span class="highlight">Zero Installation.</span></h1>
-            <p>A clip-on smart controller that attaches to any existing regulator. Turn your standard ceiling fan into an automated, app-controlled ecosystem without touching a single wire.</p>
-            <a href="#business" class="btn-primary">Explore the Business Case</a>
+            <h1>Sira</h1>
+            <h2 class="hero-sub">Turn any fan into a smart fan — no wiring, no installation.</h2>
+            <p>A non-invasive hardware device that retrofits onto existing fan regulators to enable remote and automated control — without modifying electrical infrastructure.</p>
+            <a href="#overview" class="btn-primary">Explore Sira</a>
         </div>
     </header>
 
+    <section id="overview" class="section alt-bg">
+        <div class="content-split fade-in">
+            <div class="glass-card flow-card">
+                <h3 class="gradient-text">What is Sira?</h3>
+                <p>Sira is a retrofit-based smart control system designed to bring automation to traditional fan regulators.</p>
+                <p>Instead of replacing switchboards or rewiring homes, Sira works with existing infrastructure by physically interfacing with the regulator knob. The goal is to make smart home functionality accessible, affordable, and practical for everyday users — particularly in environments where upgrading infrastructure is impractical.</p>
+            </div>
+            <div class="glass-card flow-card highlight-border">
+                <h3 class="gradient-text">The Solution</h3>
+                <p>Sira addresses these challenges through a non-invasive, hardware-based approach. The device attaches directly onto the regulator and uses a motor-driven mechanism to physically rotate the knob. This enables digital control over an otherwise analog system.</p>
+                <p>By avoiding any modification to wiring or infrastructure, Sira lowers the barrier to entry for smart home adoption while maintaining compatibility with existing setups.</p>
+            </div>
+        </div>
+    </section>
+
     <section id="problem" class="section">
         <div class="section-header fade-in">
-            <h2>The Friction</h2>
-            <p>Solving the daily hassle of mechanical airflow control.</p>
+            <h2>The Problem</h2>
+            <p>Solving the daily hassle and inefficiency of mechanical airflow control.</p>
         </div>
-        <div class="grid fade-in">
+        <div class="grid-4 fade-in">
             <div class="card flow-card">
                 <div class="animated-icon">
                     <svg viewBox="0 0 100 100" class="icon-svg">
@@ -43,7 +61,7 @@
                     </svg>
                 </div>
                 <h3>Sleep Discomfort</h3>
-                <p>Waking up freezing or sweating disrupts deep REM sleep cycles. The room temperature drops, but your fan speed doesn't.</p>
+                <p>Fan speed remains constant even as room temperature changes throughout the night. This often results in users waking up feeling too cold or too warm, disrupting sleep cycles and reducing comfort.</p>
             </div>
             <div class="card flow-card">
                 <div class="animated-icon">
@@ -54,7 +72,7 @@
                     </svg>
                 </div>
                 <h3>Smart Home Barriers</h3>
-                <p>Traditional smart switches require electricians, rewiring, and are entirely useless to renters who can't modify the walls.</p>
+                <p>Most smart home solutions require rewiring, replacing switchboards, or installing new systems. This creates high costs and friction, especially for renters and users in older homes.</p>
             </div>
             <div class="card flow-card">
                 <div class="animated-icon">
@@ -64,16 +82,88 @@
                         <line class="knob-tick" x1="50" y1="50" x2="50" y2="20" stroke="var(--primary)" stroke-width="5" stroke-linecap="round"/>
                     </svg>
                 </div>
-                <h3>Accessibility Limits</h3>
-                <p>Standard wall regulators are often out of reach or difficult to turn for the elderly, children, or those with mobility issues.</p>
+                <h3>Accessibility Constraints</h3>
+                <p>Traditional regulators are often inconvenient to reach, particularly for elderly users, children, or individuals with limited mobility.</p>
+            </div>
+            <div class="card flow-card">
+                <div class="animated-icon">
+                    <svg viewBox="0 0 100 100" class="icon-svg">
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="var(--text-muted)" stroke-width="3"/>
+                        <path class="spin-motion" d="M50 15 L50 50 L85 50" fill="none" stroke="var(--primary)" stroke-width="4"/>
+                        <circle cx="50" cy="50" r="6" fill="var(--primary)"/>
+                    </svg>
+                </div>
+                <h3>Inefficiency in Usage</h3>
+                <p>Fans frequently run at higher speeds than necessary, leading to unnecessary energy consumption due to lack of dynamic control.</p>
             </div>
         </div>
     </section>
 
-    <section id="business" class="section alt-bg">
+    <section id="architecture" class="section alt-bg">
         <div class="section-header fade-in">
-            <h2>Business Scope & Scale</h2>
-            <p>A highly scalable hardware model designed for the Indian retrofit market.</p>
+            <h2>Prototype & System Architecture</h2>
+            <p>Sira is currently in the early prototyping phase, with focus on validating both mechanical and electronic subsystems.</p>
+        </div>
+
+        <div class="validation-box fade-in">
+            <p><strong>Validation:</strong> Initial testing has demonstrated that controlled rotation of the regulator using a motor-driven mechanism is feasible, validating the core concept.</p>
+        </div>
+
+        <div class="content-split layout-adjust fade-in">
+            <div class="glass-card">
+                <h3 class="gradient-text">How It Works</h3>
+                <ul class="clean-list">
+                    <li>The device is mounted onto an existing fan regulator using a clip or fixed base</li>
+                    <li>A high-torque, low-speed motor is coupled to the regulator knob</li>
+                    <li>An embedded microcontroller (ESP32) processes user inputs and controls motor movement</li>
+                    <li>Commands are sent via a mobile interface using Bluetooth or WiFi</li>
+                    <li>The system translates digital inputs into precise rotational movement of the knob</li>
+                    <li>Automation logic allows dynamic adjustment of speed over time (e.g., sleep mode)</li>
+                </ul>
+            </div>
+
+            <div class="glass-card">
+                <h3 class="gradient-text">Core Components</h3>
+                <ul class="clean-list">
+                    <li><strong>Microcontroller (ESP32-C3):</strong> Acts as the central control unit, handling communication (Bluetooth/WiFi), processing user commands, and executing control logic.</li>
+                    <li><strong>Motor System:</strong> A high-torque DC gear motor or stepper motor is used to rotate the regulator knob. The motor is selected to ensure smooth, slow, and quiet operation suitable for indoor environments.</li>
+                    <li><strong>Motor Driver:</strong> (e.g., DRV8833 / L293D) Interfaces between the microcontroller and motor, enabling bidirectional control and speed modulation.</li>
+                    <li><strong>Power System:</strong> Powered using a rechargeable LiPo battery, with a charging module (TP4056) for safe and convenient recharging.</li>
+                    <li><strong>Mechanical Interface:</strong> A custom-designed coupling or clamp connects the motor shaft to the regulator knob. This is a critical component for ensuring reliable motion without slippage.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="glass-card system-flow-card fade-in">
+            <h3 class="text-center">System Flow</h3>
+            <div class="system-flow">
+                <div class="flow-step">User Input (App)</div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step">ESP32</div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step">Motor Driver</div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step">Motor Rotation</div>
+                <div class="flow-arrow">➔</div>
+                <div class="flow-step">Regulator Adjustment</div>
+            </div>
+        </div>
+        
+        <div class="considerations-box fade-in">
+            <h4>Key Technical Considerations</h4>
+            <div class="tag-flex">
+                <span class="tag">Achieving consistent torque across different regulator types</span>
+                <span class="tag">Ensuring accurate positioning for speed levels</span>
+                <span class="tag">Minimizing noise during operation</span>
+                <span class="tag">Designing a universal mechanical fit</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="business" class="section">
+        <div class="section-header fade-in">
+            <h2>Business Scope & Market Context</h2>
+            <p>Sira operates in a space where traditional electrical infrastructure is still dominant, particularly in markets like India. A large number of households rely on ceiling fans with analog regulators, yet face barriers when adopting smart home solutions due to cost and installation requirements.</p>
         </div>
         
         <div class="bento-grid fade-in">
@@ -85,18 +175,18 @@
                         <circle cx="50" cy="50" r="5" fill="var(--primary)"/>
                     </svg>
                 </div>
-                <h3>The Massive Market Gap</h3>
-                <p>Millions of households rely on analog ceiling fans. Current smart home solutions demand expensive smart switches, requiring electricians and rewiring. Sira bypasses this barrier entirely by offering a 10-second physical retrofit, instantly opening up a massive, previously inaccessible demographic with high hardware margins.</p>
+                <h3>Market Gap</h3>
+                <p>Existing smart solutions are typically built around replacement — replacing switches, installing new systems, or upgrading infrastructure. Sira takes a fundamentally different approach by focusing on retrofit compatibility, enabling smart functionality without requiring users to change their existing setup.</p>
             </div>
             
             <div class="biz-card glass-card flow-card">
-                <h3>The Renter's Advantage</h3>
-                <p>Renters cannot alter electrical wiring in their apartments. Sira is 100% removable. When a user moves out, they simply unclip Sira and take it with them.</p>
+                <h3>Renter’s Advantage</h3>
+                <p>Renters represent a significant segment that cannot modify electrical infrastructure. Sira is fully removable and portable, allowing users to install and uninstall the device without permanent changes.</p>
             </div>
 
             <div class="biz-card glass-card flow-card">
-                <h3>B2B Hospitality Scope</h3>
-                <p>Beyond D2C, Sira is targeting hotels and student hostels. These institutions want energy savings via automation, but cannot afford to rewire 500+ rooms. Sira offers a zero-downtime integration.</p>
+                <h3>B2B Opportunity</h3>
+                <p>Sira has potential applications in hospitality environments such as hotels, hostels, and serviced apartments. These spaces often seek automation but face operational challenges with rewiring. A retrofit solution allows for scalable deployment without disrupting operations.</p>
             </div>
 
             <div class="biz-card bento-large glass-card flow-card funding-card">
@@ -110,21 +200,46 @@
                         </svg>
                     </div>
                     <div>
-                        <h3 class="gradient-text">Actively Seeking Funding</h3>
-                        <p>We are currently raising seed capital to finalize injection molding tooling, bulk PCB manufacturing, and go-to-market execution.</p>
-                        <div class="partner-tag">
-                            <span class="status-dot"></span> Actively working with <strong>E-Cell MIT Manipal</strong>
-                        </div>
+                        <h3 class="gradient-text">Validation & Early-Stage Support</h3>
+                        <p><strong>Exploring Early-Stage Support:</strong> We are currently working toward building a production-ready version, focusing on hardware refinement, manufacturability, and go-to-market strategy.</p>
+                        <p><strong>Validation & Incubation:</strong> We are actively working with <strong>E-Cell MIT Manipal</strong> to validate our market approach, refine the business model, and structure our operations for scale. This partnership provides critical guidance for navigating the hardware startup ecosystem.</p>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="grid-3 info-grids fade-in">
+            <div class="glass-card">
+                <h3>Target Users</h3>
+                <ul class="clean-list">
+                    <li>Urban households using traditional fan regulators</li>
+                    <li>Renters who cannot modify infrastructure</li>
+                    <li>Budget-conscious users exploring smart home features</li>
+                    <li>Elderly users needing easier control</li>
+                    <li>Hospitality operators seeking scalable automation</li>
+                </ul>
+            </div>
+            <div class="glass-card">
+                <h3>Value Proposition</h3>
+                <ul class="clean-list">
+                    <li>No installation or electrician required</li>
+                    <li>Works with existing infrastructure</li>
+                    <li>Lower cost compared to full smart replacements</li>
+                    <li>Simple and intuitive user experience</li>
+                    <li>Portable and reusable</li>
+                </ul>
+            </div>
+            <div class="glass-card">
+                <h3>Pricing Thinking</h3>
+                <p>The goal is to develop a cost-efficient hardware system that allows Sira to be priced significantly lower than full smart switch replacements. By minimizing complexity and focusing on essential functionality, Sira aims to achieve a balance between affordability and performance, enabling wider adoption.</p>
+            </div>
+        </div>
     </section>
 
-    <section id="roadmap" class="section">
+    <section id="roadmap" class="section alt-bg">
         <div class="section-header fade-in">
             <h2>Architecture & Gameplan</h2>
-            <p>How we are translating raw hardware into a frictionless lifestyle product.</p>
+            <p><strong>Current Stage:</strong> Sira is currently in the early prototyping phase. Focus areas include developing the mechanical coupling system, testing motor-driven rotation and control, implementing basic embedded control logic, and evaluating feasibility across different regulator types.</p>
         </div>
         
         <div class="timeline-container fade-in">
@@ -132,14 +247,14 @@
                 <div class="timeline-marker complete"></div>
                 <div class="timeline-content glass-card flow-card">
                     <div class="phase-header">
-                        <h3>Phase 1: Foundation & Prototype</h3>
-                        <span class="badge complete">Completed</span>
+                        <h3>Phase 1: Core Prototype Development</h3>
                     </div>
-                    <p class="phase-desc">Establishing the core internal/external architecture and proving mechanical viability. We have a working prototype.</p>
+                    <p class="phase-desc">Establishing the foundational system and validating feasibility.</p>
                     <div class="checklist">
-                        <label class="check-item"><input type="checkbox" checked disabled> <span class="custom-check"></span> <strong>The Brain:</strong> Wire the ESP32-C3 microcontroller</label>
-                        <label class="check-item"><input type="checkbox" checked disabled> <span class="custom-check"></span> <strong>The Muscle:</strong> Integrate high-torque DC gear motor</label>
-                        <label class="check-item"><input type="checkbox" checked disabled> <span class="custom-check"></span> <strong>Control:</strong> Establish reliable bidirectional rotation</label>
+                        <label class="check-item"><span class="custom-check checked"></span> Integrate ESP32 microcontroller</label>
+                        <label class="check-item"><span class="custom-check checked"></span> Implement motor control using driver circuits</label>
+                        <label class="check-item"><span class="custom-check checked"></span> Achieve controlled bidirectional rotation</label>
+                        <label class="check-item"><span class="custom-check checked"></span> Test mechanical coupling with regulator</label>
                     </div>
                 </div>
             </div>
@@ -148,13 +263,14 @@
                 <div class="timeline-marker active"></div>
                 <div class="timeline-content glass-card flow-card">
                     <div class="phase-header">
-                        <h3>Phase 2: Smart Connectivity</h3>
-                        <span class="badge active">In Progress</span>
+                        <h3>Phase 2: Control & Intelligence Layer</h3>
                     </div>
-                    <p class="phase-desc">Fleshing out the IoT infrastructure and creating seamless device-to-phone communication.</p>
+                    <p class="phase-desc">Enhancing usability and system intelligence.</p>
                     <div class="checklist">
-                        <label class="check-item"><input type="checkbox" disabled> <span class="custom-check"></span> Develop BLE/WiFi Mobile App Pairing Protocol</label>
-                        <label class="check-item"><input type="checkbox" disabled> <span class="custom-check"></span> Code auto-calibration logic for speed stepping</label>
+                        <label class="check-item"><span class="custom-check unchecked"></span> Enable Bluetooth/WiFi-based control</label>
+                        <label class="check-item"><span class="custom-check unchecked"></span> Develop calibration logic for speed levels</label>
+                        <label class="check-item"><span class="custom-check unchecked"></span> Implement basic UI for control</label>
+                        <label class="check-item"><span class="custom-check unchecked"></span> Introduce automation features (timers, sleep mode)</label>
                     </div>
                 </div>
             </div>
@@ -163,23 +279,46 @@
                 <div class="timeline-marker"></div>
                 <div class="timeline-content glass-card flow-card">
                     <div class="phase-header">
-                        <h3>Phase 3: Production & Market</h3>
-                        <span class="badge pending">Future</span>
+                        <h3>Phase 3: Product Refinement & Deployment</h3>
                     </div>
-                    <p class="phase-desc">Finalizing aesthetics, silencing mechanics, and deploying core automation features.</p>
+                    <p class="phase-desc">Transitioning from prototype to usable product.</p>
                     <div class="checklist">
-                        <label class="check-item"><input type="checkbox" disabled> <span class="custom-check"></span> Deploy dynamic "Sleep Mode" algorithm</label>
-                        <label class="check-item"><input type="checkbox" disabled> <span class="custom-check"></span> Finalize injection mold tooling via funding</label>
+                        <label class="check-item"><span class="custom-check unchecked"></span> Optimize mechanical design for reliability</label>
+                        <label class="check-item"><span class="custom-check unchecked"></span> Reduce noise and improve compactness</label>
+                        <label class="check-item"><span class="custom-check unchecked"></span> Improve battery efficiency</label>
+                        <label class="check-item"><span class="custom-check unchecked"></span> Prepare for manufacturability and scaling</label>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="content-split fade-in" style="margin-top: 4rem;">
+            <div class="glass-card">
+                <h3 class="gradient-text">Key Challenges</h3>
+                <ul class="clean-list">
+                    <li>Designing a universal fit across regulator types</li>
+                    <li>Ensuring consistent and accurate speed control</li>
+                    <li>Reducing mechanical noise for night-time use</li>
+                    <li>Maintaining durability and reliability</li>
+                    <li>Balancing cost with performance</li>
+                </ul>
+            </div>
+            <div class="glass-card">
+                <h3 class="gradient-text">Future Direction</h3>
+                <ul class="clean-list">
+                    <li>Improve prototype reliability and usability</li>
+                    <li>Conduct user testing and validation</li>
+                    <li>Refine pricing and positioning</li>
+                    <li>Expand into broader home automation solutions</li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <section id="contact" class="section alt-bg">
+    <section id="contact" class="section">
         <div class="section-header fade-in">
-            <h2>Get in Touch</h2>
-            <p>Interested in funding, partnerships, or learning more about Sira?</p>
+            <h2>Project Initiative & Contact</h2>
+            <p><strong>Independent Ownership:</strong> This is an independently initiated project where I am leading both the technical development and product direction.</p>
         </div>
         <div class="contact-container fade-in">
             <div class="glass-card flow-card contact-card">
@@ -190,6 +329,7 @@
                     </svg>
                 </div>
                 <h3 class="contact-title">Let's Connect</h3>
+                <p>Interested in early-stage support, partnerships, or learning more about Sira?</p>
                 <div class="contact-details">
                     <p class="contact-name"><strong>Name:</strong> Yosha Chokhany</p>
                     <p class="contact-email"><strong>Mail us at:</strong> <a href="mailto:yosha0705@gmail.com" class="highlight-link">yosha0705@gmail.com</a></p>
