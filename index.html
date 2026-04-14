@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sira | The Retrofit Smart Fan Controller</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="ambient-fan"></div>
+
+    <nav id="navbar">
+        <div class="logo">SIRA</div>
+        <div class="nav-links">
+            <a href="#problem">The Problem</a>
+            <a href="#business">Business & Scope</a>
+            <a href="#roadmap">Architecture & Gameplan</a>
+            <a href="#contact">Contact Us</a>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content fade-in">
+            <h1>Smart Comfort. <br><span class="highlight">Zero Installation.</span></h1>
+            <p>A clip-on smart controller that attaches to any existing regulator. Turn your standard ceiling fan into an automated, app-controlled ecosystem without touching a single wire.</p>
+            <a href="#business" class="btn-primary">Explore the Business Case</a>
+        </div>
+    </header>
+
+    <section id="problem" class="section">
+        <div class="section-header fade-in">
+            <h2>The Friction</h2>
+            <p>Solving the daily hassle of mechanical airflow control.</p>
+        </div>
+        <div class="grid fade-in">
+            <div class="card flow-card">
+                <div class="animated-icon">
+                    <svg viewBox="0 0 100 100" class="icon-svg">
+                        <path class="wave-motion" d="M10,50 Q25,20 50,50 T90,50" fill="none" stroke="var(--primary)" stroke-width="4" stroke-linecap="round"/>
+                        <path class="wave-motion offset" d="M10,70 Q25,40 50,70 T90,70" fill="none" stroke="var(--text-muted)" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Sleep Discomfort</h3>
+                <p>Waking up freezing or sweating disrupts deep REM sleep cycles. The room temperature drops, but your fan speed doesn't.</p>
+            </div>
+            <div class="card flow-card">
+                <div class="animated-icon">
+                    <svg viewBox="0 0 100 100" class="icon-svg">
+                        <rect x="20" y="20" width="60" height="60" rx="10" fill="none" stroke="var(--text-muted)" stroke-width="3"/>
+                        <line class="plug-motion" x1="50" y1="80" x2="50" y2="50" stroke="var(--primary)" stroke-width="4" stroke-linecap="round"/>
+                        <circle cx="50" cy="50" r="8" fill="var(--primary)"/>
+                    </svg>
+                </div>
+                <h3>Smart Home Barriers</h3>
+                <p>Traditional smart switches require electricians, rewiring, and are entirely useless to renters who can't modify the walls.</p>
+            </div>
+            <div class="card flow-card">
+                <div class="animated-icon">
+                    <svg viewBox="0 0 100 100" class="icon-svg regulator-icon">
+                        <circle cx="50" cy="50" r="35" fill="none" stroke="var(--text-muted)" stroke-width="3"/>
+                        <circle cx="50" cy="50" r="25" fill="none" stroke="var(--text-muted)" stroke-width="2" stroke-dasharray="4 8"/>
+                        <line class="knob-tick" x1="50" y1="50" x2="50" y2="20" stroke="var(--primary)" stroke-width="5" stroke-linecap="round"/>
+                    </svg>
+                </div>
+                <h3>Accessibility Limits</h3>
+                <p>Standard wall regulators are often out of reach or difficult to turn for the elderly, children, or those with mobility issues.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="business" class="section alt-bg">
+        <div class="section-header fade-in">
+            <h2>Business Scope & Scale</h2>
+            <p>A highly scalable hardware model designed for the Indian retrofit market.</p>
+        </div>
+        
+        <div class="bento-grid fade-in">
+            <div class="biz-card bento-large glass-card flow-card highlight-border">
+                <div class="animated-icon float-icon">
+                    <svg viewBox="0 0 100 100" class="icon-svg">
+                        <circle cx="50" cy="50" r="40" fill="none" stroke="rgba(75, 192, 200, 0.2)" stroke-width="2"/>
+                        <circle class="ring-expand" cx="50" cy="50" r="20" fill="none" stroke="var(--primary)" stroke-width="3"/>
+                        <circle cx="50" cy="50" r="5" fill="var(--primary)"/>
+                    </svg>
+                </div>
+                <h3>The Massive Market Gap</h3>
+                <p>Millions of households rely on analog ceiling fans. Current smart home solutions demand expensive smart switches, requiring electricians and rewiring. Sira bypasses this barrier entirely by offering a 10-second physical retrofit, instantly opening up a massive, previously inaccessible demographic with high hardware margins.</p>
+            </div>
+            
+            <div class="biz-card glass-card flow-card">
+                <h3>The Renter's Advantage</h3>
+                <p>Renters cannot alter electrical wiring in their apartments. Sira is 100% removable. When a user moves out, they simply unclip Sira and take it with them.</p>
+            </div>
+
+            <div class="biz-card glass-card flow-card">
+                <h3>B2B Hospitality Scope</h3>
+                <p>Beyond D2C, Sira is targeting hotels and student hostels. These institutions want energy savings via automation, but cannot afford to rewire 500+ rooms. Sira offers a zero-downtime integration.</p>
+            </div>
+
+            <div class="biz-card bento-large glass-card flow-card funding-card">
+                <div class="funding-content">
+                    <div class="animated-icon pulse-icon">
+                        <svg viewBox="0 0 100 100" class="icon-svg">
+                            <polygon points="50,15 90,80 10,80" fill="none" stroke="var(--secondary)" stroke-width="3"/>
+                            <circle class="pulse-node" cx="50" cy="15" r="6" fill="var(--secondary)"/>
+                            <circle class="pulse-node delay-1" cx="90" cy="80" r="6" fill="var(--secondary)"/>
+                            <circle class="pulse-node delay-2" cx="10" cy="80" r="6" fill="var(--secondary)"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <h3 class="gradient-text">Actively Seeking Funding</h3>
+                        <p>We are currently raising seed capital to finalize injection molding tooling, bulk PCB manufacturing, and go-to-market execution.</p>
+                        <div class="partner-tag">
+                            <span class="status-dot"></span> Actively working with <strong>E-Cell MIT Manipal</strong>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="roadmap" class="section">
+        <div class="section-header fade-in">
+            <h2>Architecture & Gameplan</h2>
+            <p>How we are translating raw hardware into a frictionless lifestyle product.</p>
+        </div>
+        
+        <div class="timeline-container fade-in">
+            <div class="timeline-row">
+                <div class="timeline-marker complete"></div>
+                <div class="timeline-content glass-card flow-card">
+                    <div class="phase-header">
+                        <h3>Phase 1: Foundation & Prototype</h3>
+                        <span class="badge complete">Completed</span>
+                    </div>
+                    <p class="phase-desc">Establishing the core internal/external architecture and proving mechanical viability. We have a working prototype.</p>
+                    <div class="checklist">
+                        <label class="check-item"><input type="checkbox" checked disabled> <span class="custom-check"></span> <strong>The Brain:</strong> Wire the ESP32-C3 microcontroller</label>
+                        <label class="check-item"><input type="checkbox" checked disabled> <span class="custom-check"></span> <strong>The Muscle:</strong> Integrate high-torque DC gear motor</label>
+                        <label class="check-item"><input type="checkbox" checked disabled> <span class="custom-check"></span> <strong>Control:</strong> Establish reliable bidirectional rotation</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-row">
+                <div class="timeline-marker active"></div>
+                <div class="timeline-content glass-card flow-card">
+                    <div class="phase-header">
+                        <h3>Phase 2: Smart Connectivity</h3>
+                        <span class="badge active">In Progress</span>
+                    </div>
+                    <p class="phase-desc">Fleshing out the IoT infrastructure and creating seamless device-to-phone communication.</p>
+                    <div class="checklist">
+                        <label class="check-item"><input type="checkbox" disabled> <span class="custom-check"></span> Develop BLE/WiFi Mobile App Pairing Protocol</label>
+                        <label class="check-item"><input type="checkbox" disabled> <span class="custom-check"></span> Code auto-calibration logic for speed stepping</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="timeline-row">
+                <div class="timeline-marker"></div>
+                <div class="timeline-content glass-card flow-card">
+                    <div class="phase-header">
+                        <h3>Phase 3: Production & Market</h3>
+                        <span class="badge pending">Future</span>
+                    </div>
+                    <p class="phase-desc">Finalizing aesthetics, silencing mechanics, and deploying core automation features.</p>
+                    <div class="checklist">
+                        <label class="check-item"><input type="checkbox" disabled> <span class="custom-check"></span> Deploy dynamic "Sleep Mode" algorithm</label>
+                        <label class="check-item"><input type="checkbox" disabled> <span class="custom-check"></span> Finalize injection mold tooling via funding</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section alt-bg">
+        <div class="section-header fade-in">
+            <h2>Get in Touch</h2>
+            <p>Interested in funding, partnerships, or learning more about Sira?</p>
+        </div>
+        <div class="contact-container fade-in">
+            <div class="glass-card flow-card contact-card">
+                <div class="animated-icon contact-icon">
+                    <svg viewBox="0 0 100 100" class="icon-svg">
+                        <rect x="15" y="30" width="70" height="45" rx="4" fill="none" stroke="var(--primary)" stroke-width="3"/>
+                        <polyline class="mail-flap" points="15,30 50,55 85,30" fill="none" stroke="var(--primary)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <h3 class="contact-title">Let's Connect</h3>
+                <div class="contact-details">
+                    <p class="contact-name"><strong>Name:</strong> Yosha Chokhany</p>
+                    <p class="contact-email"><strong>Mail us at:</strong> <a href="mailto:yosha0705@gmail.com" class="highlight-link">yosha0705@gmail.com</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Sira Concept Blueprint. Engineered for the future of retrofit smart homes.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
